@@ -6,16 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>プライバシーポリシー - あおぎり通知</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
-    <div class="container">
-        <header>
+    <!-- Navbar (Simplified for policy page) -->
+    <nav class="navbar">
+        <div class="container navbar-container">
+            <a href="index.html" class="logo">あおぎり通知 <span class="badge">非公式</span></a>
+        </div>
+    </nav>
+
+    <header class="policy-header">
+        <div class="container">
             <h1>プライバシーポリシー</h1>
             <p>最終更新日: 2026年2月4日</p>
-        </header>
+        </div>
+    </header>
 
-        <section class="policy-content">
+    <main class="container">
+        <article class="policy-content">
             <p>「あおぎり通知（非公式）」（以下、「本アプリ」）は、本アプリが提供するサービス（以下、「本サービス」）における利用者の情報の取り扱いについて、以下の通りプライバシーポリシー（以下、「本ポリシー」）を定めます。
             </p>
 
@@ -76,15 +90,22 @@
                 <a href="https://docs.google.com/forms/d/e/1FAIpQLSc5w3t4XtqG7V3mVwvk8U7mFK-iJGW5YQdQvmb0PuOJAYy1Kw/viewform?usp=sharing&ouid=105300214912419835222"
                     target="_blank">お問い合わせフォーム</a>
             </p>
-        </section>
+        </article>
+    </main>
 
-        <footer>
-            <nav>
-                <a href="index.html">トップページに戻る</a>
-            </nav>
-            <p class="copyright">&copy; 2026 あおぎり通知</p>
-        </footer>
+    <div class="policy-footer">
+        <a href="index.html" class="btn-store" style="display: inline-block; background-color: var(--primary-color);">
+            <div class="btn-text">
+                <span class="big-text">トップページに戻る</span>
+            </div>
+        </a>
     </div>
+
+    <footer>
+        <div class="container">
+            <p class="copyright">&copy; 2026 あおぎり通知</p>
+        </div>
+    </footer>
 </body>
 
 </html>

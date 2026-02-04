@@ -429,6 +429,46 @@ footer {
     color: #666;
 }
 
+/* Policy Page Layout */
+.policy-content {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.policy-content h3 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--bg-light);
+    padding-bottom: 5px;
+}
+
+.policy-content p,
+.policy-content ul {
+    margin-bottom: 20px;
+}
+
+.policy-content ul {
+    padding-left: 20px;
+    list-style: disc;
+}
+
+.policy-content li {
+    margin-bottom: 10px;
+}
+
+.policy-header {
+    text-align: center;
+    padding: 60px 0 20px;
+    background-color: var(--bg-light);
+}
+
+.policy-footer {
+    text-align: center;
+    padding: 40px 0;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .navbar-container {
@@ -462,5 +502,15 @@ footer {
 
     .footer-center {
         order: 3;
+    }
+
+    .hero-image {
+        order: -1;
+        margin-bottom: 30px;
+    }
+
+    .phone-mockup {
+        width: 240px;
+        height: 480px;
     }
 }
