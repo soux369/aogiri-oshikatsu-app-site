@@ -817,6 +817,39 @@ body {
     white-space: nowrap;
 }
 
+/* Left-aligned Section Header for Desktop Layout alignment */
+.section-header-left {
+    text-align: left;
+    margin-bottom: 60px;
+    padding: 0 24px;
+}
+
+.section-header-left h2 {
+    font-family: 'Outfit', var(--font-sans);
+    font-size: 3.2rem;
+    font-weight: 900;
+    margin-bottom: 20px;
+    letter-spacing: -2px;
+    color: var(--color-black);
+}
+
+.section-header-left p {
+    color: var(--color-muted);
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin-left: 0;
+    margin-right: auto;
+}
+
+@media (max-width: 768px) {
+    .section-header-left {
+        text-align: center;
+    }
+    .section-header-left p {
+        margin: 0 auto;
+    }
+}
+
 /* Right-aligned Section Header for Desktop Layout alternation */
 .section-header-right {
     text-align: right;
