@@ -12,7 +12,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -60,14 +60,19 @@
 
 <body>
 
+    <!-- Ambient Grid & Fluid Mesh Background -->
+    <div class="grid-overlay"></div>
+    <div class="mesh-glow mesh-glow-1"></div>
+    <div class="mesh-glow mesh-glow-2"></div>
+
     <!-- Navbar -->
     <nav class="navbar">
         <div class="container navbar-container">
             <a href="#" class="logo">Vべる</a>
             <ul class="nav-links">
-                <li><a href="#features">機能特徴</a></li>
-                <li><a href="#details">詳細</a></li>
-                <li><a href="#download" class="nav-cta">今すぐダウンロード</a></li>
+                <li><a href="#interactive-showcase">アプリ体験</a></li>
+                <li><a href="#features">主要機能</a></li>
+                <li><a href="#download" class="nav-cta">無料ダウンロード</a></li>
                 <li><a href="privacy.html" class="nav-policy">プライバシーポリシー</a></li>
             </ul>
         </div>
@@ -77,9 +82,9 @@
     <header class="hero">
         <div class="container hero-container">
             <div class="hero-content">
-                <span class="hero-tag">App Store 好評配信中</span>
+                <span class="hero-tag"><i class="fa-solid fa-sparkles"></i> App Store 正式配信中</span>
                 <h1>推しの配信を、<br><span class="highlight">もう見逃さない。</span></h1>
-                <p>「あおぎり高校」ファンのためのスケジュール＆通知アプリ。配信開始や新着動画をスマホに即座にお知らせします。</p>
+                <p>「あおぎり高校」ファンのための非公式スケジュール＆リアルタイム通知アプリ。配信開始や新着動画をスマホへ最速でお知らせします。</p>
                 <div class="app-buttons">
                     <a href="https://apps.apple.com/jp/app/v-%E3%81%99%E3%82%8B-%E9%85%8D%E4%BF%A1%E9%85%8D%E4%BF%A1%E3%82%A2%E3%83%97%E3%83%AA/id6776140545" class="btn-store" target="_blank" rel="noopener noreferrer">
                         <i class="fa-brands fa-apple"></i>
@@ -89,103 +94,137 @@
                         </div>
                     </a>
                 </div>
-                <p class="release-note"><i class="fa-solid fa-circle-check"></i> iOS 16.0以降に対応（完全無料）</p>
+                <p class="release-note"><i class="fa-solid fa-shield-check"></i> iOS 16.0以降に対応（完全無料）</p>
             </div>
             <div class="hero-image">
-                <div class="phone-mockup-wrapper">
+                <div class="phone-mockup-perspective">
                     <div class="phone-mockup">
                         <div class="phone-notch"></div>
-                        <img src="images/screen1.jpeg" alt="Vべる 配信リスト画面" class="phone-screenshot">
+                        <img src="images/screen1.jpeg" alt="Vべる アプリ画面プレビュー" class="phone-screenshot">
                     </div>
+                    <!-- Floating abstract UI badges for world-class look -->
+                    <div class="floating-badge badge-live"><i class="fa-solid fa-circle"></i> LIVE</div>
+                    <div class="floating-badge badge-bell"><i class="fa-solid fa-bell"></i> 配信開始！</div>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- LUUP Style Story Sections -->
-    <section id="features" class="story-sections">
-        <div class="container">
-            
-            <!-- Section 01 -->
-            <div class="story-row">
-                <div class="story-text">
-                    <div class="story-num">01</div>
-                    <h2>アプリ内カレンダーで<br>配信予定を一元管理</h2>
-                    <p>あおぎり高校メンバー全員の直近の予定を、見やすい月間カレンダーに自動マッピング。その日に配信予定があるメンバーのアバターが日付マスの下に並び、タップひとつでその日の配信スケジュールを瞬時にフィルタリングできます。これでもう「いつ、誰が配信するのか」迷うことはありません。</p>
-                </div>
-                <div class="story-image">
-                    <div class="phone-mockup">
-                        <div class="phone-notch"></div>
-                        <img src="images/screen2.jpeg" alt="Vべる アプリ内カレンダー画面" class="phone-screenshot">
-                    </div>
-                </div>
-            </div>
-
-            <!-- Section 02 (Reversed) -->
-            <div class="story-row row-reverse">
-                <div class="story-text">
-                    <div class="story-num">02</div>
-                    <h2>外部への強制転送を防ぐ<br>安全なアプリ内プレイヤー</h2>
-                    <p>配信リストやカレンダーから動画カードをタップすると、公式YouTubeアプリ等に強制遷移せず、アプリ内（WebView）に組み込まれた高機能プレイヤーで直接再生可能。ノッチやセーフエリアを完璧に考慮したスマートなヘッダーと、戻る/進む/リロードボタンを備えた専用のナビゲーションバーを完備しています。ログイン不要で、ライブチャットの読み込みにも完全対応。</p>
-                </div>
-                <div class="story-image">
-                    <div class="phone-mockup">
-                        <div class="phone-notch"></div>
-                        <img src="images/screen3.jpeg" alt="Vべる 動画プレイヤー画面" class="phone-screenshot">
-                    </div>
-                </div>
-            </div>
-
-            <!-- Section 03 -->
-            <div class="story-row">
-                <div class="story-text">
-                    <div class="story-num">03</div>
-                    <h2>瞬時に届くプッシュ通知と<br>パーソナルな推し活メモ</h2>
-                    <p>お気に入りメンバーのライブ配信開始、新着動画の投稿をスマホへOSレベルで即座に通知。さらに、配信ごとにタイムスタンプや見どころ、感想を書き残せる個別メモ機能を搭載。データは端末のローカルストレージ（AsyncStorage）に安全に保存され、あなただけの「推し活日記」として活用できます。</p>
-                </div>
-                <div class="story-image">
-                    <div class="phone-mockup">
-                        <div class="phone-notch"></div>
-                        <img src="images/screen1.jpeg" alt="Vべる プッシュ通知＆メモ画面" class="phone-screenshot">
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Details Section -->
-    <section id="details" class="details-sec">
+    <!-- Interactive App Showcase Section (World-Class Interactive Demo) -->
+    <section id="interactive-showcase" class="interactive-sec">
         <div class="container">
             <div class="section-header">
-                <h2>細部までこだわり抜いた設計</h2>
-                <p>あおぎり高校のファン活動を、もっとスマートに。</p>
+                <h2>手のひらで、推し活をスマートに</h2>
+                <p>タップして、実際にアプリの極めて快適なUIと機能性を体験してください。</p>
             </div>
-            <div class="details-grid">
-                <div class="details-card">
-                    <div class="icon-circle"><i class="fa-solid fa-bolt"></i></div>
-                    <h3>表記揺れ対応の曖昧検索</h3>
-                    <p>ひらがな・カタカナ・全角半角を自動で正規化し、Levenshtein距離（編集距離）アルゴリズムを用いたタイポ許容の検索。入力の手間を省き、目的の配信を即座に探し出せます。</p>
+            
+            <div class="showcase-container">
+                <!-- Interactive Controllers -->
+                <div class="showcase-controls">
+                    <!-- Tab 01 -->
+                    <div class="showcase-tab active" onclick="switchShowcase(0)">
+                        <div class="tab-num">01</div>
+                        <div class="tab-content">
+                            <h3>配信リスト</h3>
+                            <p>配信中のLIVE、間もなく始まる配信予定、終了したアーカイブまで、全員の最新スケジュールをタイムラインで一望できます。</p>
+                        </div>
+                        <div class="tab-progress-bar"><div class="progress"></div></div>
+                    </div>
+                    
+                    <!-- Tab 02 -->
+                    <div class="showcase-tab" onclick="switchShowcase(1)">
+                        <div class="tab-num">02</div>
+                        <div class="tab-content">
+                            <h3>アプリ内カレンダー</h3>
+                            <p>月間のスケジュールをマッピング。その日に枠があるタレントのアバターアイコンが日付マスの下に並び、視覚的に予定を把握できます。</p>
+                        </div>
+                        <div class="tab-progress-bar"><div class="progress"></div></div>
+                    </div>
+                    
+                    <!-- Tab 03 -->
+                    <div class="showcase-tab" onclick="switchShowcase(2)">
+                        <div class="tab-num">03</div>
+                        <div class="tab-content">
+                            <h3>安全な内蔵プレイヤー</h3>
+                            <p>YouTube公式アプリへの意図しない強制転送を防ぐ、戻る・進む・更新・完了を備えたセーフティなWebViewプレイヤーを完備。</p>
+                        </div>
+                        <div class="tab-progress-bar"><div class="progress"></div></div>
+                    </div>
                 </div>
-                <div class="details-card">
-                    <div class="icon-circle"><i class="fa-solid fa-user-gear"></i></div>
-                    <h3>メンバーの表示カスタマイズ</h3>
-                    <p>設定画面から、表示したいタレントを個別でON/OFF。配信リストやカレンダーに、お気に入りのメンバーの予定だけを絞り込んで表示するパーソナライズ機能を搭載。</p>
-                </div>
-                <div class="details-card">
-                    <div class="icon-circle"><i class="fa-solid fa-shield-halved"></i></div>
-                    <h3>安全なオフラインファースト</h3>
-                    <p>データをローカルにキャッシュして即座に画面を表示する高速設計。通信エラーや低速回線時でも、すでに取得した予定やメモをいつでも確認できます。</p>
+                
+                <!-- Interactive Phone Simulator -->
+                <div class="showcase-simulator">
+                    <div class="simulator-wrapper">
+                        <div class="simulator-phone">
+                            <div class="phone-notch"></div>
+                            <!-- Slidable Screen Track -->
+                            <div class="screen-track" id="screenTrack">
+                                <img src="images/screen1.jpeg" alt="配信リスト画面" class="simulator-image">
+                                <img src="images/screen2.jpeg" alt="アプリ内カレンダー画面" class="simulator-image">
+                                <img src="images/screen3.jpeg" alt="内蔵WebViewプレイヤー画面" class="simulator-image">
+                            </div>
+                        </div>
+                        <!-- Phone reflection highlight -->
+                        <div class="simulator-reflection"></div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Download Section -->
-    <section id="download" class="cta">
+    <!-- Detailed Features Grid Section -->
+    <section id="features" class="features-sec">
         <div class="container">
+            <div class="section-header">
+                <h2>細部までこだわり抜いた、本物の設計</h2>
+                <p>あおぎり高校のファン活動をもっと便利にするための高度なアプローチ</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="icon-wrapper"><i class="fa-solid fa-bell"></i></div>
+                    <h3>リアルタイムプッシュ通知</h3>
+                    <p>バックエンドシステムと連携し、お気に入りのタレントの配信開始や急な枠立てを、OSレベルの通知で瞬時に受け取れます。</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="icon-wrapper"><i class="fa-solid fa-magnifying-glass"></i></div>
+                    <h3>タイポ対応の曖昧検索</h3>
+                    <p>ひらがな・カタカナ・全角半角の自動正規化に加え、Levenshtein距離アルゴリズムによる文字の打ち間違いを自動で吸収する高度な検索機能。</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="icon-wrapper"><i class="fa-solid fa-pen-fancy"></i></div>
+                    <h3>プライベート「推し活メモ」</h3>
+                    <p>各配信ごとにタイムスタンプや感想を自由に記録。情報はすべて端末のローカルデータベース（AsyncStorage）に暗号化され安全に保持されます。</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="icon-wrapper"><i class="fa-solid fa-user-gear"></i></div>
+                    <h3>タレント表示の個別フィルタ</h3>
+                    <p>設定画面から表示したいメンバーを自由に変更。カレンダーも配信リストも、あなただけの推しカスタム仕様に動的リマッピングされます。</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="icon-wrapper"><i class="fa-solid fa-database"></i></div>
+                    <h3>オフラインファースト設計</h3>
+                    <p>通信環境が悪い場所でも、キャッシュされた前回の予定やメモを瞬時に表示する高速なデータキャッシュハンドリングを実装しています。</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="icon-wrapper"><i class="fa-solid fa-circle-nodes"></i></div>
+                    <h3>セーフティWebViewガード</h3>
+                    <p>外部ディープリンクへの予期せぬリダイレクト遷移を完全にブロック。ライブチャットのロードや認証もアプリ内で安全に行えます。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Call To Action Section -->
+    <section id="download" class="cta">
+        <div class="cta-inner container">
             <h2>あなたの推し活を、もっとスマートに。</h2>
-            <p>Vべる（あおぎり通知）アプリで、充実したファンライフを今すぐ始めましょう。</p>
+            <p>Vべる（あおぎり通知）アプリで、最高のあおぎりライフを今すぐ始めましょう。</p>
             <div class="app-buttons">
                 <a href="https://apps.apple.com/jp/app/v-%E3%81%99%E3%82%8B-%E9%85%8D%E4%BF%A1%E9%85%8D%E4%BF%A1%E3%82%A2%E3%83%97%E3%83%AA/id6776140545" class="btn-store" target="_blank" rel="noopener noreferrer">
                     <i class="fa-brands fa-apple"></i>
@@ -220,6 +259,46 @@
             </div>
         </div>
     </footer>
+
+    <!-- Interactive Showcase Logic (Vanilla JS) -->
+    <script>
+        const track = document.getElementById('screenTrack');
+        const tabs = document.querySelectorAll('.showcase-tab');
+        let currentIndex = 0;
+        let autoplayTimer = null;
+
+        function switchShowcase(index) {
+            // Update active state of tabs
+            tabs.forEach((tab, idx) => {
+                if (idx === index) {
+                    tab.classList.add('active');
+                } else {
+                    tab.classList.remove('active');
+                }
+            });
+
+            // Slide the screen track
+            // Translation calculation: each screen width is 100% (254px)
+            track.style.transform = `translateX(-${index * 100}%)`;
+            currentIndex = index;
+
+            // Reset autoplay timer when user manually interacts
+            resetAutoplay();
+        }
+
+        function autoplay() {
+            let nextIndex = (currentIndex + 1) % tabs.length;
+            switchShowcase(nextIndex);
+        }
+
+        function resetAutoplay() {
+            clearInterval(autoplayTimer);
+            autoplayTimer = setInterval(autoplay, 7000); // Autoplay every 7 seconds
+        }
+
+        // Initialize autoplay on load
+        resetAutoplay();
+    </script>
 
 </body>
 
