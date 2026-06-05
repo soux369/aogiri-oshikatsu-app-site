@@ -80,7 +80,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <header class="hero">
+    <header class="hero" data-bg="#ffffff">
         <div class="container hero-container">
             <div class="hero-content">
                 <span class="hero-tag"><i class="fa-solid fa-sparkles"></i> App Store 正式配信中</span>
@@ -116,7 +116,7 @@
     </header>
 
     <!-- Interactive App Showcase Section (World-Class Interactive Demo) -->
-    <section id="interactive-showcase" class="interactive-sec">
+    <section id="interactive-showcase" class="interactive-sec" data-bg="#f8fafc">
         <div class="container">
             <div class="section-header">
                 <h2>手のひらで、<span class="nobr">推し活をスマートに</span></h2>
@@ -179,7 +179,7 @@
     </section>
 
     <!-- Detailed Features Grid Section (Bento Grid) -->
-    <section id="features" class="features-sec">
+    <section id="features" class="features-sec" data-bg="#eaf7f4">
         <div class="container">
             <div class="section-header-right">
                 <h2>細部までこだわり抜いた、<span class="nobr">本物の設計</span></h2>
@@ -368,7 +368,7 @@
     </section>
 
     <!-- Download Call To Action Section -->
-    <section id="download" class="cta">
+    <section id="download" class="cta" data-bg="#ffffff">
         <div class="cta-inner container">
             <h2>あなたの推し活を、<span class="nobr">もっとスマートに。</span></h2>
             <p>Vべるアプリで、最高の推し活ライフを今すぐ始めましょう。</p>
@@ -444,6 +444,27 @@
 
         // Initialize autoplay on load
         resetAutoplay();
+
+        // Dynamic Background Scroll Interaction (World-Class Clean Transitions)
+        const scrollSections = document.querySelectorAll('[data-bg]');
+        const observerOptions = {
+            root: null,
+            rootMargin: '-30% 0px -30% 0px', // Trigger when section occupies the middle of the screen
+            threshold: 0
+        };
+
+        const scrollObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const bgColor = entry.target.getAttribute('data-bg');
+                    document.body.style.backgroundColor = bgColor;
+                }
+            });
+        }, observerOptions);
+
+        scrollSections.forEach(section => {
+            scrollObserver.observe(section);
+        });
     </script>
 
 </body>
