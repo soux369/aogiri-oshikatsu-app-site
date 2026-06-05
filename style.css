@@ -1530,7 +1530,7 @@ footer {
 
 @media (max-width: 768px) {
     .container {
-        padding: 0 24px;
+        padding: 0 20px;
     }
 
     .navbar {
@@ -1544,38 +1544,41 @@ footer {
     }
 
     .nav-links {
-        gap: 20px;
+        gap: 16px;
         flex-wrap: wrap;
         justify-content: center;
     }
 
     .hero {
-        padding: 60px 0 100px;
+        padding: 50px 0 80px;
     }
 
     .hero-container {
         flex-direction: column;
         text-align: center;
+        gap: 40px;
     }
 
     .hero-content h1 {
-        font-size: 2.8rem;
-        letter-spacing: -1.5px;
+        font-size: 2.6rem !important;
+        letter-spacing: -2px !important;
+        line-height: 1.1 !important;
     }
 
     .hero-content p {
         margin-left: auto;
         margin-right: auto;
+        font-size: 1.1rem;
     }
 
     .app-buttons {
         justify-content: center;
         flex-wrap: wrap;
+        gap: 12px;
     }
 
     .hero-image {
-        order: -1;
-        margin-bottom: 60px;
+        margin-top: 20px;
         width: 100%;
         max-width: 272px;
     }
@@ -1585,16 +1588,48 @@ footer {
     }
 
     .floating-badge {
-        display: none; /* Hide floating widgets on mobile for layout sanity */
+        display: none !important; /* Disable floating badges on mobile */
     }
 
+    /* Showcase mobile optimization (Tabs above Simulator) */
     .showcase-container {
-        flex-direction: column-reverse;
-        gap: 40px;
+        flex-direction: column;
+        gap: 32px;
     }
 
     .showcase-controls {
+        flex-direction: row;
         width: 100%;
+        gap: 8px;
+    }
+
+    .showcase-tab {
+        padding: 12px 8px;
+        border-radius: 14px;
+        flex: 1;
+        text-align: center;
+        box-shadow: var(--shadow-sm);
+    }
+    
+    .showcase-tab::before {
+        display: none !important; /* Hide left border marker */
+    }
+
+    .showcase-tab:hover {
+        transform: none !important;
+    }
+
+    .showcase-tab .tab-content p,
+    .showcase-tab .tab-num,
+    .showcase-tab .tab-progress-bar {
+        display: none !important; /* Turn cards into compact buttons */
+    }
+
+    .showcase-tab .tab-content h3 {
+        font-size: 0.8rem;
+        margin-bottom: 0;
+        font-weight: 700;
+        white-space: nowrap;
     }
 
     .showcase-simulator {
@@ -1603,16 +1638,67 @@ footer {
         margin: 0 auto;
     }
 
+    /* Bento Grid mobile padding fixes */
     .bento-grid {
         grid-template-columns: 1fr;
+        gap: 20px;
     }
 
     .bento-wide {
         grid-column: span 1;
     }
 
+    .bento-card {
+        padding: 28px 20px;
+        border-radius: 20px;
+    }
+
+    .bento-visual {
+        padding: 16px;
+        margin-top: 20px;
+    }
+
+    .visual-notification-stack {
+        max-width: 100%;
+        height: 100px;
+    }
+
+    .noti-stack-item {
+        padding: 10px 14px;
+        gap: 10px;
+    }
+
+    .noti-text h4 {
+        font-size: 0.8rem;
+    }
+
+    .noti-text p {
+        font-size: 0.7rem;
+    }
+
+    .visual-filter-list {
+        max-width: 100%;
+    }
+
+    .visual-search {
+        max-width: 100%;
+    }
+
+    .visual-webview-sim {
+        max-width: 100%;
+    }
+
+    .section-header h2,
+    .section-header-left h2,
+    .section-header-right h2 {
+        font-size: 2.0rem !important;
+        letter-spacing: -1.5px !important;
+        line-height: 1.15 !important;
+    }
+
     .cta h2 {
-        font-size: 2.5rem;
+        font-size: 2.0rem !important;
+        letter-spacing: -1.5px !important;
     }
 
     .footer-container {
@@ -1624,5 +1710,17 @@ footer {
 
     .footer-center {
         order: 3;
+    }
+}
+
+/* Extra support for small viewport sizes (e.g. iPhone SE) */
+@media (max-width: 350px) {
+    .iphone-frame, .simulator-phone {
+        width: 236px;
+        height: 486px;
+    }
+    
+    .showcase-tab .tab-content h3 {
+        font-size: 0.72rem;
     }
 }
