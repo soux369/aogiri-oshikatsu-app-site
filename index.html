@@ -96,11 +96,15 @@
                 </div>
                 <p class="release-note"><i class="fa-solid fa-shield-check"></i> iOS 16.0以降に対応（完全無料）</p>
             </div>
+            
             <div class="hero-image">
                 <div class="phone-mockup-perspective">
-                    <div class="phone-mockup">
-                        <div class="phone-notch"></div>
-                        <img src="images/screen1.jpeg" alt="Vべる アプリ画面プレビュー" class="phone-screenshot">
+                    <div class="iphone-frame">
+                        <div class="iphone-screen-area">
+                            <div class="dynamic-island"></div>
+                            <img src="images/screen1.jpeg" alt="Vべる アプリ画面プレビュー" class="phone-screenshot">
+                            <div class="glass-reflection"></div>
+                        </div>
                     </div>
                     <!-- Floating abstract UI badges for world-class look -->
                     <div class="floating-badge badge-live"><i class="fa-solid fa-circle"></i> LIVE</div>
@@ -125,7 +129,7 @@
                     <div class="showcase-tab active" onclick="switchShowcase(0)">
                         <div class="tab-num">01</div>
                         <div class="tab-content">
-                            <h3>配信リスト</h3>
+                            <h3>配信スケジュール</h3>
                             <p>配信中のLIVE、間もなく始まる配信予定、終了したアーカイブまで、全員の最新スケジュールをタイムラインで一望できます。</p>
                         </div>
                         <div class="tab-progress-bar"><div class="progress"></div></div>
@@ -156,23 +160,24 @@
                 <div class="showcase-simulator">
                     <div class="simulator-wrapper">
                         <div class="simulator-phone">
-                            <div class="phone-notch"></div>
-                            <!-- Slidable Screen Track -->
-                            <div class="screen-track" id="screenTrack">
-                                <img src="images/screen1.jpeg" alt="配信リスト画面" class="simulator-image">
-                                <img src="images/screen2.jpeg" alt="アプリ内カレンダー画面" class="simulator-image">
-                                <img src="images/screen3.jpeg" alt="内蔵WebViewプレイヤー画面" class="simulator-image">
+                            <div class="simulator-screen-area">
+                                <div class="dynamic-island"></div>
+                                <!-- Slidable Screen Track -->
+                                <div class="screen-track" id="screenTrack">
+                                    <img src="images/screen1.jpeg" alt="配信スケジュール画面" class="simulator-image">
+                                    <img src="images/screen2.jpeg" alt="アプリ内カレンダー画面" class="simulator-image">
+                                    <img src="images/screen3.jpeg" alt="内蔵WebViewプレイヤー画面" class="simulator-image">
+                                </div>
+                                <div class="glass-reflection"></div>
                             </div>
                         </div>
-                        <!-- Phone reflection highlight -->
-                        <div class="simulator-reflection"></div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Detailed Features Grid Section -->
+    <!-- Detailed Features Grid Section (Bento Grid) -->
     <section id="features" class="features-sec">
         <div class="container">
             <div class="section-header">
@@ -180,41 +185,89 @@
                 <p>あおぎり高校のファン活動をもっと便利にするための高度なアプローチ</p>
             </div>
             
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="icon-wrapper"><i class="fa-solid fa-bell"></i></div>
-                    <h3>リアルタイムプッシュ通知</h3>
-                    <p>バックエンドシステムと連携し、お気に入りのタレントの配信開始や急な枠立てを、OSレベルの通知で瞬時に受け取れます。</p>
+            <div class="bento-grid">
+                <!-- Card 1: Notifications (Wide) -->
+                <div class="bento-card bento-wide">
+                    <div class="bento-text">
+                        <div class="icon-wrapper icon-pink"><i class="fa-solid fa-bell"></i></div>
+                        <h3>リアルタイムプッシュ通知</h3>
+                        <p>バックエンドシステムと連携し、お気に入りのタレントの配信開始や急な枠立てを、OSレベルの通知で瞬時に受け取れます。</p>
+                    </div>
+                    <div class="bento-visual">
+                        <div class="visual-notification">
+                            <div class="noti-dot"></div>
+                            <div class="noti-text">
+                                <h4>大代真白 配信開始！</h4>
+                                <p>「【地獄】絶対に笑ってはいけない24時...」</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 
-                <div class="feature-card">
-                    <div class="icon-wrapper"><i class="fa-solid fa-magnifying-glass"></i></div>
-                    <h3>タイポ対応の曖昧検索</h3>
-                    <p>ひらがな・カタカナ・全角半角の自動正規化に加え、Levenshtein距離アルゴリズムによる文字の打ち間違いを自動で吸収する高度な検索機能。</p>
+                <!-- Card 2: Filter (Square) -->
+                <div class="bento-card">
+                    <div class="bento-text">
+                        <div class="icon-wrapper icon-blue"><i class="fa-solid fa-user-gear"></i></div>
+                        <h3>推しメンバー個別フィルタ</h3>
+                        <p>設定画面から表示したいメンバーを自由に変更。カレンダーも配信スケジュールも、あなただけの推しカスタム仕様に動的リマッピングされます。</p>
+                    </div>
                 </div>
                 
-                <div class="feature-card">
-                    <div class="icon-wrapper"><i class="fa-solid fa-pen-fancy"></i></div>
-                    <h3>プライベート「推し活メモ」</h3>
-                    <p>各配信ごとにタイムスタンプや感想を自由に記録。情報はすべて端末のローカルデータベース（AsyncStorage）に暗号化され安全に保持されます。</p>
+                <!-- Card 3: Fuzzy Search (Square) -->
+                <div class="bento-card">
+                    <div class="bento-text">
+                        <div class="icon-wrapper icon-green"><i class="fa-solid fa-magnifying-glass"></i></div>
+                        <h3>タイポ対応の曖昧検索</h3>
+                        <p>ひらがな・カタカナ・全角半角の自動正規化に加え、Levenshtein距離アルゴリズムによる文字の打ち間違いを自動で吸収する高度な検索機能。</p>
+                    </div>
+                    <div class="bento-visual">
+                        <div class="visual-search">
+                            <div class="search-box">
+                                <i class="fa-solid fa-search" style="color: var(--color-muted)"></i>
+                                <span>おおしろましろ</span>
+                            </div>
+                            <div class="search-correction">
+                                もしかして: <span>大代真白</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 
-                <div class="feature-card">
-                    <div class="icon-wrapper"><i class="fa-solid fa-user-gear"></i></div>
-                    <h3>タレント表示の個別フィルタ</h3>
-                    <p>設定画面から表示したいメンバーを自由に変更。カレンダーも配信リストも、あなただけの推しカスタム仕様に動的リマッピングされます。</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="icon-wrapper"><i class="fa-solid fa-database"></i></div>
-                    <h3>オフラインファースト設計</h3>
-                    <p>通信環境が悪い場所でも、キャッシュされた前回の予定やメモを瞬時に表示する高速なデータキャッシュハンドリングを実装しています。</p>
+                <!-- Card 4: Safety Player (Wide) -->
+                <div class="bento-card bento-wide">
+                    <div class="bento-text">
+                        <div class="icon-wrapper icon-purple"><i class="fa-solid fa-circle-nodes"></i></div>
+                        <h3>セーフティWebViewガード</h3>
+                        <p>外部ディープリンクへの予期せぬリダイレクト遷移を完全にブロック。YouTube公式アプリへの強制移動を防ぎ、ライブチャットのロードや認証もアプリ内で安全に行えます。</p>
+                    </div>
+                    <div class="bento-visual">
+                        <div class="visual-player">
+                            <div class="player-play-btn"><i class="fa-solid fa-play"></i></div>
+                            <div class="player-controls">
+                                <span>02:15 / 12:40</span>
+                                <i class="fa-solid fa-maximize"></i>
+                            </div>
+                            <div class="player-progress"></div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="feature-card">
-                    <div class="icon-wrapper"><i class="fa-solid fa-circle-nodes"></i></div>
-                    <h3>セーフティWebViewガード</h3>
-                    <p>外部ディープリンクへの予期せぬリダイレクト遷移を完全にブロック。ライブチャットのロードや認証もアプリ内で安全に行えます。</p>
+                <!-- Card 5: Oshikatsu Memo (Square) -->
+                <div class="bento-card">
+                    <div class="bento-text">
+                        <div class="icon-wrapper icon-orange"><i class="fa-solid fa-pen-fancy"></i></div>
+                        <h3>プライベート「推し活メモ」</h3>
+                        <p>各配信ごとにタイムスタンプや感想を自由に記録。情報はすべて端末のローカルデータベース（AsyncStorage）に暗号化され安全に保持されます。</p>
+                    </div>
+                </div>
+                
+                <!-- Card 6: Offline First (Square) -->
+                <div class="bento-card">
+                    <div class="bento-text">
+                        <div class="icon-wrapper icon-pink"><i class="fa-solid fa-database"></i></div>
+                        <h3>オフラインファースト設計</h3>
+                        <p>通信環境が悪い場所でも、キャッシュされた前回の予定やメモを瞬時に表示する高速なデータキャッシュハンドリングを実装しています。</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -278,7 +331,6 @@
             });
 
             // Slide the screen track
-            // Translation calculation: each screen width is 100% (254px)
             track.style.transform = `translateX(-${index * 100}%)`;
             currentIndex = index;
 
